@@ -1,0 +1,49 @@
+{
+  "name": "demawo-prop-v2",
+  "version": "1.0.0",
+  "description": "Mern Application for Property management",
+  "main": "index.js",
+  "engines": {
+    "node": "12.16.3",
+    "npm": "6.14.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "backend": "nodemon index.js",
+    "client-install": "npm install --prefix client",
+    "client": "cd client && npm start ",
+    "frontend": "npm run front --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "nodejs",
+    "property",
+    "management"
+  ],
+  "author": "Demawo",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.0",
+    "mongoose": "^5.10.6",
+    "multer": "^1.4.2",
+    "react-redux": "^7.2.1",
+    "socket.io": "^2.3.0",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
